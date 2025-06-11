@@ -1,0 +1,44 @@
+<body>
+  <div class="card">
+    <div class="register-container">
+      <h2 align="center">Add Fertilizer</h2>
+
+      <!-- Display message -->
+      <div *ngIf="message" [ngClass]="messageClass" class="message">{{ message }}</div>
+
+      <!-- Registration Form -->
+      <form (ngSubmit)="register()" #registerForm="ngForm">
+        <div class="form-group">
+          <label for="name_of_fertilizer">Name of Fertilizer:</label>
+          <input type="text" id="name_of_fertilizer" name="name_of_fertilizer" [(ngModel)]="name_of_fertilizer" required>
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="nitrogen_content">Nitrogen Content(%):</label>
+          <input type="text" id="nitrogen_content" name="nitrogen_content" [(ngModel)]="nitrogen_content" required>
+         
+        </div>
+
+        <div class="form-group">
+          <label for="potassium_content">Potassium Content(%):</label>
+          <input type="text" id="potassium_content" name="potassium_content"  [(ngModel)]="potassium_content" required>
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="phosphorus_content">Phosphorus Content(%):</label>
+          <input type="text" id="phosphorus_content" name="phosphorus_content" [(ngModel)]="phosphorus_content" required>
+          
+        </div>
+        <div class="form-group">
+          <label for="name_of_crops_used">Name of Crops Used:</label>
+          <input type="text" id="name_of_crops_used" name="name_of_crops_used" [(ngModel)]="name_of_crops_used" required>
+          
+        </div>
+        <button type="submit" [disabled]="registerForm.invalid">Add Fertilizer</button>
+        
+      </form>
+    </div>
+  </div>
+</body>

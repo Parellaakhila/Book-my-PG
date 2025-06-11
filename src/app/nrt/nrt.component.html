@@ -1,0 +1,94 @@
+<div>
+    <br><br>
+    <br>
+  
+    <div class="container">
+     
+      <!-- First Column with multiple buttons -->
+      <div class="column first-column"><br>
+        <button (click)="toggleContent(1)">Prakash Nagar</button><br><br>
+        <button (click)="toggleContent(2)">Srinivas Nagar</button><br><br>
+        <button (click)="toggleContent(3)">Option 3</button><br><br>
+      </div>
+  
+      <!-- Second Column with dynamic content -->
+ 
+      <div class="column second-column content-display">
+        
+        <!-- Content for Prakash Nagar -->
+        <div *ngIf="isContentVisible === 1" class="content">
+            <div class="pg-list">
+                <div class="pg-item">
+          <img src="https://content.jdmagicbox.com/v2/comp/narasaraopet/m8/9999p8647.8647.120207121559.g4m8/catalogue/venkata-thirumala-ladies-hostel-narasaraopet-bazar-narasaraopet-hostels-for-women-cl9y96mtn3-250.jpg" width="50%">
+          <div class="pg-info">
+          <h6>Venkata Thirumala Ladies Hostel </h6>
+          <p>Prakash Nagar,Narasaraopet,Palanadu</p>
+          <p>&#8377; 4300/month</p>
+          <button>View Details</button>
+        </div></div>
+          <div class="pg-item">
+          <img src="https://content.jdmagicbox.com/v2/comp/narasaraopet/x5/9999p8647.8647.231206132242.l1x5/catalogue/bharathi-ladies-hostel-narasaraopet-hostels-2g4j211n4v-250.jpg" width="50%">
+          <div class="pg-info">
+          <h6>vasundhara ladies hostel</h6>
+          <p>Prakash Nagar,Narasaraopet,Palanadu</p>
+          <p>&#8377; 4500/month</p>
+          <button>View Details</button></div></div>
+          
+          
+          <div class="pg-item">
+            <img src="https://content.jdmagicbox.com/comp/hyderabad/u5/040pxx40.xx40.160622113516.t2u5/catalogue/priyanka-ladies-hostel-nacharam-hyderabad-2c6nzt97e0-250.jpg" width="50%">
+            <div class="pg-info">
+            <h6>Priyanka ladies hostel</h6>
+            <p>Prakash Nagar,Narasaraopet,Palanadu</p>
+            <p>&#8377; 5000/month</p>
+            <button>View Details</button></div></div>
+        </div>
+        </div>
+    
+  
+        <!-- Content for Srinivas Nagar -->
+        <div *ngIf="isContentVisible === 2" class="content">
+            <div class="pg-list">
+                <div class="pg-item">
+                  <img src="path-to-image.jpg" alt="HelloWorld Spring">
+                  <div class="pg-info">
+                    <h4>Hello World Spring</h4>
+                    <p>Ward No 66, B.G.V Grand, Udayambalayam Road, Sowripalayam, Coimbatore - 641028</p>
+                    <p>₹ 6000/month onwards</p>
+                    <button>View PG Details</button>
+                  </div>
+                </div>
+              
+                <div class="pg-item">
+                  <img src="path-to-image2.jpg" alt="HelloWorld Kovai">
+                  <div class="pg-info">
+                    <h4>HelloWorld Kovai</h4>
+                    <p>Door #84 Dr. Jegannatha Nagar, opp to Coimbatore Medical College, Coimbatore - 641014</p>
+                    <p>₹ 4500/month onwards</p>
+                    <button>View PG Details</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          
+  
+        <!-- Content for Option 3 -->
+        <div *ngIf="isContentVisible === 3" class="content">
+          <img src="https://content.jdmagicbox.com/v2/comp/narasaraopet/x8/9999p8647.8647.120207121559.g4x8/catalogue/third-hostel.jpg" width="50%" height="50%">
+          <h2>Hostel Option 3</h2>
+          <p>&#8377; 4000/month</p>
+          <button>View Details</button>
+        </div>
+        <div *ngIf="isContentVisible === 3" class="content">
+          <img src="https://content.jdmagicbox.com/v2/comp/narasaraopet/x8/9999p8647.8647.120207121559.g4x8/catalogue/third-hostel.jpg" width="50%" height="50%">
+          <h2>Hostel Option 3</h2>
+          <p>&#8377; 4000/month</p>
+          <button>View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+   
+  

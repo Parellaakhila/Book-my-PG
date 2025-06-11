@@ -1,0 +1,239 @@
+
+<nav class="navbar">
+  <div class="menu-icon" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  
+      
+   <a routerLink="/home" class="logo">
+    <img src="https://thumbs.dreamstime.com/b/hostel-logo-hotel-logo-travel-rest-place-vector-illustration-97549145.jpg" alt="Logo" class="logo-image">
+  </a> 
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search"
+      [(ngModel)]="searchTerm"
+      (keydown)="onEnterKey($event)" 
+    />
+    <i class="fas fa-search" (click)="onSearch()"></i>
+    
+  </div>
+  
+ 
+  <div class="nav-links">
+    <ul class="nav-links">
+      <li><a routerLink="/home">HOME</a></li>
+      
+      <li><a routerLink="/contact">CONTACT US</a></li>
+      <li><a routerLink="/about">ABOUT US</a></li>
+      <li><a routerLink="/register">REGISTER</a></li>
+      <li><a routerLink="/login">LOGIN</a></li>
+      
+      
+      
+
+       <!-- Added Register link -->
+    </ul>
+  </div>
+  
+
+  <div class="profile-container" (click)="toggleProfileMenu()">
+    <div class="profile-icon">
+      <i class="fas fa-user"></i>
+    </div>
+    <div class="profile-menu" *ngIf="isProfileMenuOpen">
+      <ul>
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/settings">Settings</a></li>
+        <li>
+        <button onclick="document.getElementById('id01').style.display='block'">Sing out</button>
+      </li> </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="side-menu">
+  <div class="side-menu-content">
+    <div class="side-menu-items">
+      <ul>
+        <li>
+          <a routerLink="/home">
+            <i class="fas fa-home"></i>
+            <span class="menu-text">Home</span>
+            
+          </a>
+        </li>
+        <li>
+          <a routerLink="/businesses">
+            <i class="fas fa-envelope"></i>
+            <span class="menu-text">Businesses</span>
+           
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact">
+            <i class="fas fa-user"></i>
+            <span class="menu-text">Contact</span>
+           
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about">
+            <i class="fas fa-info-circle"></i>
+            <span class="menu-text">About</span>
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> 
+
+<div class="backdrop" *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Set a style for all buttons */
+button {
+  background-color: #f0f4f3;
+  color: rgb(21, 20, 20);
+  padding: 20px 50px;
+  margin: 1px 3;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+  
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 10%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+ 
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 140px;
+  top: 110px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #181818;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content">
+    
+    <div class="container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+      <h3>LOG OUT</h3>
+      <p>Are you sure you want to logout your account?</p>
+    
+      <div class="clearfix">
+        <a routerLink="/home">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></a>
+        <a routerLink="/login">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
