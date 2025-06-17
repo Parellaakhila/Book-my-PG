@@ -1,0 +1,73 @@
+{
+  "locations": [
+    {
+      "name": "Prakash Nagar",
+      "hostels": [
+        {
+          "name": "Venkata Thirumala Ladies Hostel",
+          "address": "Prakash Nagar, Narasaraopet, Palanadu",
+          "price": 4300,
+          "image": "https://content.jdmagicbox.com/v2/comp/narasaraopet/m8/9999p8647.8647.120207121559.g4m8/catalogue/venkata-thirumala-ladies-hostel.jpg"
+        },
+        {
+          "name": "Vasundhara Ladies Hostel",
+          "address": "Prakash Nagar, Narasaraopet, Palanadu",
+          "price": 4500,
+          "image": "https://content.jdmagicbox.com/v2/comp/narasaraopet/x5/9999p8647.8647.231206132242.l1x5/catalogue/bharathi-ladies-hostel.jpg"
+        },
+        {
+          "name": "Priyanka Ladies Hostel",
+          "address": "Prakash Nagar, Narasaraopet, Palanadu",
+          "price": 5000,
+          "image": "https://content.jdmagicbox.com/comp/hyderabad/u5/040pxx40.xx40.160622113516.t2u5/catalogue/priyanka-ladies-hostel.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Srinivas Nagar",
+      "hostels": [
+        {
+          "name": "Hello World Spring",
+          "address": "Ward No 66, B.G.V Grand, Sowripalayam, Coimbatore",
+          "price": 6000,
+          "image": "https://via.placeholder.com/300x200?text=Spring"
+        },
+        {
+          "name": "Hello World Kovai",
+          "address": "84 Dr. Jegannatha Nagar, Coimbatore",
+          "price": 4500,
+          "image": "https://via.placeholder.com/300x200?text=Kovai"
+        },
+        {
+          "name": "Comfort Ladies PG",
+          "address": "Srinivas Nagar, Narasaraopet",
+          "price": 4700,
+          "image": "https://via.placeholder.com/300x200?text=Comfort+PG"
+        }
+      ]
+    },
+    {
+      "name": "Lakshmi Nagar",
+      "hostels": [
+        {
+          "name": "Lakshmi Ladies Hostel",
+          "address": "Lakshmi Nagar, Narasaraopet",
+          "price": 4000,
+          "image": "https://via.placeholder.com/300x200?text=Lakshmi+Hostel"
+        },
+        {
+          "name": "Sri Sai PG",
+          "address": "Lakshmi Nagar, Narasaraopet",
+          "price": 4800,
+          "image": "https://via.placeholder.com/300x200?text=Sri+Sai+PG"
+        },
+        {
+          "name": "Green Nest Hostel",
+          "address": "Near Lakshmi Nagar Bus Stand",
+          "price": 5200,
+          "image": "https://via.placeholder.com/300x200?text=Green+Nest"
+        }
+      ]
+    }
+  ]
+}

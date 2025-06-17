@@ -1,0 +1,21 @@
+<h2>Hostel List</h2>
+<a routerLink="/add">Add New Hostel</a>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Rooms</th>
+    <th>Facilities</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let hostel of hostels">
+    <td>{{ hostel.name }}</td>
+    <td>{{ hostel.address }}</td>
+    <td>{{ hostel.rooms }}</td>
+    <td>{{ hostel.facilities.join(', ') }}</td>
+    <td>
+      <button (click)="editHostel(hostel.id!)">Edit</button>
+      <button (click)="deleteHostel(hostel.id!)">Delete</button>
+    </td>
+  </tr>
+</table>

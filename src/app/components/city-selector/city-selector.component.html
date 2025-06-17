@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>India's Largest PG Network to Book your PG Online</h2>
+  <div class="search-bar">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Enter city name, area etc..." />
+    <button (click)="useLocation()">📍 Near me</button>
+  </div>
+
+  <div class="city-grid">
+    <div *ngFor="let city of filteredCities()" class="city-card">
+      <img [src]="city.imageUrl" [alt]="city.name" />
+      <p>{{ city.name }}</p>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+<h2>{{ isEdit ? 'Edit' : 'Add' }} Hostel</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input [(ngModel)]="hostel.name" name="name" required /><br />
+
+  <label>Address:</label>
+  <input [(ngModel)]="hostel.address" name="address" required /><br />
+
+  <label>Rooms:</label>
+  <input type="number" [(ngModel)]="hostel.rooms" name="rooms" required /><br />
+
+  <label>Facilities (comma-separated):</label>
+  <input [(ngModel)]="hostel.facilities" name="facilities"
+         (ngModelChange)="hostel.facilities = $event.split(',')" /><br />
+
+  <button type="submit">{{ isEdit ? 'Update' : 'Add' }}</button>
+</form>

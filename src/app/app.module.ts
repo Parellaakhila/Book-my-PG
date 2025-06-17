@@ -19,6 +19,9 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
 import { RegisterComponent } from './register/register.component';
 import { CurdComponent } from './curd/curd.component';
 import { NrtComponent } from './nrt/nrt.component';
+import { HostelListComponent } from './components/hostel-list/hostel-list.component';
+import { HostelFormComponent } from './components/hostel-form/hostel-form.component';
+import { CitySelectorComponent } from './components/city-selector/city-selector.component';
 
 
 
@@ -39,12 +42,20 @@ import { NrtComponent } from './nrt/nrt.component';
     RegisterComponent,
     NrtComponent,
     CurdComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    HostelListComponent,
+    HostelFormComponent,
+    CitySelectorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserModule,
+
+    
+    FormsModule,
+    
     HttpClientModule  // Include HttpClientModule here
   ],
   providers: [],
